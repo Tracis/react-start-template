@@ -1,4 +1,4 @@
-import { SystemState, UPDATE_SESSION } from '../types/system';
+import { SystemState, UPDATE_SESSION } from "../types/system";
 
 export function updateSession(newSession: SystemState) {
   return {

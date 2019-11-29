@@ -1,5 +1,7 @@
-import * as React from 'react';
-import { UpdateMessageParam } from './index';
+import * as React from "react";
+import { UpdateMessageParam } from "./index";
+import { FormattedMessage } from "react-intl";
+import messages from "messages";
 
 interface ChatInterfaceProps {
   message: string;
@@ -15,7 +17,7 @@ const ChatInterface: React.SFC<ChatInterfaceProps> = ({
   sendMessage,
 }) => {
   function keyPress(e: React.KeyboardEvent<any>) {
-    if (e.key === 'Enter') {
+    if (e.key === "Enter") {
       send();
     }
   }
@@ -26,7 +28,9 @@ const ChatInterface: React.SFC<ChatInterfaceProps> = ({
 
   return (
     <div className="chat-interface">
-      <h3>User: {userName} </h3>
+      <h3>
+        <FormattedMessage {...messages.user} />: {userName}{" "}
+      </h3>
       <input
         value={message}
         onChange={updateMessage}

@@ -17,8 +17,8 @@ export interface MenuType {
   group_name?: string;
 }
 
-export const GET_USER_INFO_SUCCESS = 'account/get_user_info_success';
-export const USER_LOGIN_OUT_SUCCESS = 'account/user_log_out_success';
+export const GET_USER_INFO_SUCCESS = "account/get_user_info_success";
+export const USER_LOGIN_OUT_SUCCESS = "account/user_log_out_success";
 
 interface GetAccountAction {
   type: typeof GET_USER_INFO_SUCCESS;

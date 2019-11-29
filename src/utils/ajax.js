@@ -8,16 +8,23 @@ function checkSucces(result) {
       : typeof result.res_msg === "string"
       ? result.res_msg
       : "";
+    showAlert({
+      type: "error",
+      message: errMessage,
+    });
     throw new Error(errMessage);
   }
 }
 
 export default function(params) {
-  return ajax && ajax({
-    ...params,
-    showAlert,
-    checkSucces,
-    alwaysShowErrorAlert: true,
-    pathPrefix: "/api/v1/",
-  });
+  return (
+    ajax &&
+    ajax({
+      ...params,
+      showAlert,
+      checkSucces,
+      alwaysShowErrorAlert: true,
+      pathPrefix: "/api/v1/",
+    })
+  );
 }

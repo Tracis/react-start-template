@@ -2,14 +2,14 @@ import {
   AccountActionTypes,
   AccountState,
   GET_USER_INFO_SUCCESS,
-} from '../types/account';
+} from "../types/account";
 
 const initialState: AccountState = {
   admin: false,
   menus: [],
-  name: '',
+  name: "",
   id: null,
-  language: 'zh-CN',
+  language: "zh-CN",
 };
 
 export default function chatReducer(

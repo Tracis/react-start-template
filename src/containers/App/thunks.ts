@@ -1,7 +1,7 @@
-import { Action } from 'redux';
-import { ThunkAction } from 'redux-promise';
-import { sendMessage } from 'modules/actions/chat';
-import { AppState } from 'modules';
+import { Action } from "redux";
+import { ThunkAction } from "redux-promise";
+import { sendMessage } from "modules/actions/chat";
+import { AppState } from "modules";
 
 export const thunkSendMessage = (
   message: string,
@@ -17,5 +17,5 @@ export const thunkSendMessage = (
 };
 
 function exampleAPI() {
-  return Promise.resolve('Async Chat Bot');
+  return Promise.resolve("Async Chat Bot");
 }

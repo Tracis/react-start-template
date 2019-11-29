@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { Message } from 'modules/types/chat';
+import * as React from "react";
+import { Message } from "modules/types/chat";
 
 interface ChatHistoryProps {
   messages: Message[];

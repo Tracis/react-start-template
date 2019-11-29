@@ -26,3 +26,24 @@
 npm install
 npm run start
 ```
+
+## 4. 目录
+
+- messages: 多语言定义文件夹, 所有多语言定义均放在此文件夹, 可以在此文件夹下新建子文件夹
+- translations: 运行`npm run i18n`之后生成的多语言配置文件, 默认中文, 会将`messages`下的内容转换成json文件放到'zh-CN.json'中. `en.json`也会生成对应的`key`, 内容自行填入, 所以不要手动修改`zh-CN.json`它是通过`messages`下的内容生成的.
+
+## 5. 其他命令
+
+```sh
+# 1. lint
+npm run lint
+# 2. 增加或更新messages文件下的内容后要生成多语言文件
+npm run i18n
+# 3. auto fix tslint
+npm run lint:fix
+```
+
+## 6. 其他
+
+- 使用[husky](https://github.com/typicode/husky), 增加了`pre commit`的`npm run lint`的hook
+- 全局的TS声明文件`src/react-app-env.d.ts`

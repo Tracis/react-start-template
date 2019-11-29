@@ -1,9 +1,9 @@
-import { UPDATE_SESSION, SystemState, SystemActionTypes } from '../types/system';
+import { UPDATE_SESSION, SystemState, SystemActionTypes } from "../types/system";
 
 const initialState: SystemState = {
   loggedIn: false,
-  session: '',
-  userName: '',
+  session: "",
+  userName: "",
 };
 
 export default function systemReducer(

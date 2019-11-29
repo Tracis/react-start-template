@@ -1,5 +1,5 @@
-import { defineMessages } from 'react-intl';
+import { defineMessages } from "react-intl";
 
 export default defineMessages({
-  importFile: '导入文件',
+  user: "当前用户",
 });

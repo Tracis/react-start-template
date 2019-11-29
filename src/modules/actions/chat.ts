@@ -1,4 +1,4 @@
-import { Message, SEND_MESSAGE, DELETE_MESSAGE } from '../types/chat';
+import { Message, SEND_MESSAGE, DELETE_MESSAGE } from "../types/chat";
 
 export function sendMessage(newMessage: Message) {
   return {

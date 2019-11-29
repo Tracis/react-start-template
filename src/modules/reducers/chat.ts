@@ -3,7 +3,7 @@ import {
   SEND_MESSAGE,
   DELETE_MESSAGE,
   ChatActionTypes,
-} from '../types/chat';
+} from "../types/chat";
 
 const initialState: ChatState = {
   messages: [],

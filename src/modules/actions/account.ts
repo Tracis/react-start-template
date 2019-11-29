@@ -1,6 +1,6 @@
-import { ajax } from 'utils';
+import { ajax } from "utils";
 
-import { GET_USER_INFO_SUCCESS } from '../types/account';
+import { GET_USER_INFO_SUCCESS } from "../types/account";
 
 export function getUserInfo(querystring: { id?: string }): any {
   return {
@@ -9,15 +9,15 @@ export function getUserInfo(querystring: { id?: string }): any {
       new Promise((resolve) => {
         const request = querystring.id
           ? ajax({
-              url: 'accounts/login_with_url',
+              url: "accounts/login_with_url",
               body: querystring,
             }).then(() =>
               ajax({
-                url: 'accounts/user_info',
+                url: "accounts/user_info",
               }),
             )
           : ajax({
-              url: 'accounts/user_info',
+              url: "accounts/user_info",
             });
 
         resolve(request);
@@ -30,8 +30,8 @@ export function userLogin() {
     type: [null, null, null],
     promise: () =>
       ajax({
-        url: 'accounts/login/',
-        method: 'GET',
+        url: "accounts/login/",
+        method: "GET",
       }),
   };
 }
